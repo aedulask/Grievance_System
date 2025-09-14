@@ -57,18 +57,6 @@ System Architecture & Workflow
     MongoDB Database   AI Categorization
   (Users & Grievances)  (Rule & Sentiment)
 
-Grievance Workflow
+## License
 
-Citizen submits grievance
-          |
-          v
-Backend stores grievance
-          |
-          v
-AI categorizes grievance
-          |
-          v
-Panchayat views & resolves grievance
-          |
-          v
-Status updated for citizen
+This project is for academic/educational purposes.
