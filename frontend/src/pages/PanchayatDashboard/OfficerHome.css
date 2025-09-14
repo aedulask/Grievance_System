@@ -1,0 +1,81 @@
+.officer-home {
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #4e54c8;
+}
+
+.dashboard-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card span {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card.total {
+  border-top: 5px solid #4e54c8;
+}
+.card.pending {
+  border-top: 5px solid #ff9800;
+}
+.card.in-progress {
+  border-top: 5px solid #2196f3;
+}
+.card.resolved {
+  border-top: 5px solid #4caf50;
+}
+
+.faq-testimonials {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+
+.faq-testimonials h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.faq-testimonials ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.faq-testimonials li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}

@@ -1,0 +1,54 @@
+/* Blue header bar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* "Grievance System" clickable logo */
+.header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+/* Navigation bar inside header */
+.citizen-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.citizen-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: border-bottom 0.3s ease;
+  padding: 6px 0;
+}
+
+.citizen-nav a:hover {
+  border-bottom: 2px solid white;
+}
+
+.citizen-nav a.active {
+  border-bottom: 2px solid white;
+}
+
+/* Right side icons */
+.header-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+}
+.header-icons i {
+  cursor: pointer;
+}

@@ -1,0 +1,61 @@
+.completed-grievances {
+  padding: 30px;
+  background: linear-gradient(to right, #6a82fb, #7b5bf7);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.completed-grievances h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.grievance-card {
+  background: #ffffff;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 850px;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.18);
+  font-size: 16px;
+  color: #222;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grievance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Compact paragraph spacing --- */
+.grievance-card p {
+  margin: 5px 0;    /* reduced vertical spacing */
+  line-height: 1.4; /* tighter line height */
+}
+
+.grievance-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.status-list {
+  margin-top: 12px; /* slightly smaller top margin */
+  padding-left: 20px;
+  list-style: none;
+}
+
+.status-list li {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 3px; /* tighter spacing between timeline items */
+  font-weight: 600;
+}

@@ -1,0 +1,102 @@
+/* Page container with gradient background */
+.complaints-container {
+  padding: 30px;
+  background: linear-gradient(to right, #6a82fb, #7b5bf7);
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.complaints-container h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff; /* visible on gradient */
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Card */
+.complaint-card {
+  background: #ffffff;
+  padding: 25px 30px;
+  margin: 20px auto;
+  border-radius: 14px;
+  width: 95%;
+  max-width: 800px;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.18);
+  font-size: 16px;
+  color: #222;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.complaint-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.complaint-card p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Image inside card */
+.complaint-img {
+  display: block;
+  margin: 15px auto;
+  max-width: 350px;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Action buttons */
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.actions button:hover {
+  transform: scale(1.05);
+}
+
+.actions button:first-child {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.actions button:last-child {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 650px) {
+  .complaint-card {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .complaint-img {
+    max-width: 90%;
+    max-height: 200px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0078d4;
+  color: white;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer; /* Makes it clear it’s clickable */
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* User Info Popup */
+.user-info-popup {
+  position: absolute;
+  top: 50px;
+  right: 60px; /* Offset from user icon */
+  background: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+  min-width: 180px;
+}
+
+.user-info-popup p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Settings Dropdown */
+.settings-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 10px; /* Offset from settings icon */
+  background: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+  min-width: 120px;
+}
+
+.settings-dropdown button {
+  background: none;
+  border: none;
+  color: #ff4b5c;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+}
+
+.settings-dropdown button:hover {
+  text-decoration: underline;
+}

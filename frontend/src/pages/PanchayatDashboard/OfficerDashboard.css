@@ -1,0 +1,33 @@
+.officer-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  border-bottom: 2px solid #ddd;
+}
+
+.nav-btn {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-btn.active {
+  background: #fff;
+  color: #4e54c8;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-content {
+  padding: 20px;
+}
