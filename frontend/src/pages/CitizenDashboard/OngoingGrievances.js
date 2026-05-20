@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import "./OngoingGrievances.css";
 
@@ -9,22 +9,23 @@ const OngoingGrievances = ({ token }) => {
   const [expanded, setExpanded] = useState({});
 
   // Fetch ongoing grievances
-  const fetchGrievances = async () => {
-    if (!token) return;
+  const fetchGrievances = useCallback(async () => {
+  if (!token) return;
 
-    try {
-      const res = await axios.get(
-        "http://localhost:5000/api/grievances/ongoing",
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
-      setGrievances(Array.isArray(res.data) ? res.data : []);
-    } catch (err) {
-      console.error("Error fetching ongoing grievances:", err);
-      setError("Failed to load grievances.");
-    } finally {
-      setLoading(false);
-    }
-  };
+  try {
+    const res = await axios.get(
+      "http://localhost:5000/api/grievances/ongoing",
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+
+    setGrievances(Array.isArray(res.data) ? res.data : []);
+  } catch (err) {
+    console.error("Error fetching ongoing grievances:", err);
+    setError("Failed to load grievances.");
+  } finally {
+    setLoading(false);
+  }
+}, [token]);
 // eslint-disable-next-line react-hooks/exhaustive-deps
 useEffect(() => {
   if (!token) {
@@ -32,9 +33,9 @@ useEffect(() => {
     setLoading(false);
     return;
   }
-  fetchGrievances();
-}, [token]);
 
+  fetchGrievances();
+}, [token, fetchGrievances]);
   // For showing status steps
   const trackingFromStatus = (status) => [
     { name: "Submitted", completed: true },
