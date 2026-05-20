@@ -25,15 +25,15 @@ const OngoingGrievances = ({ token }) => {
       setLoading(false);
     }
   };
-
-  useEffect(() => {
-    if (!token) {
-      setError("Not authenticated. Please login.");
-      setLoading(false);
-      return;
-    }
-    fetchGrievances();
-  }, [token]);
+// eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  if (!token) {
+    setError("Not authenticated. Please login.");
+    setLoading(false);
+    return;
+  }
+  fetchGrievances();
+}, [token]);
 
   // For showing status steps
   const trackingFromStatus = (status) => [
